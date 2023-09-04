@@ -1,1 +1,1 @@
-# MobDev_INT3120_20
+# weekly excersice
