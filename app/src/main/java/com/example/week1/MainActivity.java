@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.NumberPicker;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,13 +38,17 @@ public class MainActivity extends AppCompatActivity {
                 .setAction("Action", null).show());
 
         NumberPicker numberPicker = findViewById(R.id.numberPicker);
+        ProgressBar progressBar = findViewById(R.id.progressBar);
+
         if (numberPicker != null) {
             numberPicker.setMinValue(0);
-            numberPicker.setMaxValue(1000);
+            numberPicker.setMaxValue(370);
             numberPicker.setWrapSelectorWheel(true);
             numberPicker.setOnValueChangedListener((numberPicker1, oldVal, newVal) -> {
                 String text = "Changed from " + oldVal + " to " + newVal;
                 Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
+                progressBar.setProgress(newVal * 100/numberPicker.getMaxValue(), true);
+
             });
         }
     }
