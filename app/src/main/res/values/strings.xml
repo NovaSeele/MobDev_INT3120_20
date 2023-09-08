@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Week1</string>
+    <string name="app_name">Week2</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Donation 1.5</string>
@@ -45,7 +45,7 @@
     </string>
     <string name="donation_1_5">Donation.1.5</string>
     <string name="welcome_homer">Welcome Homer</string>
-    <string name="please_give_generously">Please GIve Generously</string>
+    <string name="please_give_generously">Please Give Generously</string>
     <string name="paypal">Paypal</string>
     <string name="direct">Direct</string>
     <string name="enter_number">enter number</string>
