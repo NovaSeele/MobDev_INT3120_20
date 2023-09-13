@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Donation 1.5"
+        app:titleTextColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:padding="10dp"
+        android:text="Welcome Homer"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/please"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome"
+        android:padding="10dp"
+        android:text="Please Give Generously"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/welcome"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <RadioGroup
+        android:id="@+id/payment"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@id/please"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/numberPicker"
+        app:layout_constraintStart_toStartOf="@+id/please"
+        app:layout_constraintTop_toTopOf="@+id/numberPicker">
+
+        <RadioButton
+            android:id="@+id/paypal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Paypal" />
+
+        <RadioButton
+            android:id="@+id/direct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Direct" />
+    </RadioGroup>
+
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@id/please"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="41dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberDecimal1"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/please"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment"
+        android:layout_marginBottom="206dp"
+        android:progressBackgroundTint="@color/design_default_color_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="-50dp"
+        android:layout_marginTop="12dp"
+        android:padding="20dp"
+        android:text="amount"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="25dp"
+        android:ems="10"
+        android:hint="enter_amount"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/numberPicker"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/payment"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <Button
+        android:id="@+id/donate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amount"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="62dp"
+        android:text="donate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amount"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:text="Total so far: 727$"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal1" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/donate"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/circle"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/mail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/money"
+        app:layout_constraintTop_toTopOf="@+id/money" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

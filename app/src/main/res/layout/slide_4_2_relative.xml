@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Essentials of Developing Android 5.0"
+        app:titleTextColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/enterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar2"
+        android:layout_centerInParent="true"
+        android:ems="16"
+        android:hint="Enter your Name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#8D6E63" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enterName"
+        android:layout_centerInParent="true"
+        android:ems="16"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        android:minHeight="48dp" />
+
+    <RadioGroup
+
+        android:id="@+id/cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/phone">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/cheese_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cheese" />
+
+        <RadioButton
+            android:id="@+id/cheese_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 x Cheese" />
+        <RadioButton
+            android:id="@+id/cheese_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="None" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/cheese">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/shape_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Square" />
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/shape_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round" />
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tp_1"
+        android:layout_below="@id/shape"
+        android:text="Pepperoni" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tp_2"
+        android:layout_toRightOf="@id/tp_1"
+        android:layout_below="@id/shape"
+        android:text="Mushroom" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tp_3"
+        android:layout_toRightOf="@id/tp_2"
+        android:layout_below="@id/shape"
+        android:text="Veggies" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Your ordering"
+        android:id="@+id/order"
+        android:layout_below="@id/tp_1"/>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:ems="20"
+        android:id="@+id/preOrder"
+        android:layout_below="@id/order" />
+
+    <Button
+        android:layout_marginLeft="20dp"
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/preOrder"
+        android:text="EXIT"/>
+
+    <Button
+        android:layout_marginLeft="40dp"
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/preOrder"
+        android:layout_toRightOf="@id/exit"
+        android:text="SMS - PLACE YOUR ORDER"/>
+
+
+</RelativeLayout>
