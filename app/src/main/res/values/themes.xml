@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Slide6" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/purple</item>
+    </style>
+
+    <style name="Theme.Slide6" parent="Base.Theme.Slide6" />
+</resources>
