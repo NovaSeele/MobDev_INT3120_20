@@ -4,7 +4,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -67,4 +69,52 @@ public class MainActivity extends AppCompatActivity {
             feedback.setText("No feedback");
         }
     }
+
+
+    //implicit intent
+
+    public void onPhone(View view) {
+        EditText phoneInput = findViewById(R.id.phoneInput);
+        startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneInput.getText().toString())));
+    }
+
+    public void onAnotherActivity(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, "When You See It");
+        intent.addCategory(Intent.CATEGORY_DEFAULT);
+        intent.setComponent(new ComponentName("com.example.slide_7", "com.example.slide_7.AnotherActivity"));
+        startActivity(intent);
+    }
+
+    public void onNavMessage(View view) {
+        EditText mesInput = findViewById(R.id.messageInput);
+        Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("sms:5551234"));
+        intent.putExtra("sms_body", mesInput.getText().toString());
+        startActivity(intent);
+    }
+
+    public void onImageView(View view) {
+        Intent myIntent = new Intent();
+        myIntent.setType("image/pictures/*");
+        myIntent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivity(myIntent);
+    }
+
+    public void onEditPhone(View view) {
+        Intent intent = new Intent(Intent.ACTION_EDIT, Uri.parse("content://contacts/people/1"));
+        startActivity(intent);
+    }
+
+    public void onSeeMap(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+California"));
+        startActivity(intent);
+    }
+
+    public void onOpenPlayer(View view) {
+        Intent intent = new Intent("android.intent.action.MUSIC_PLAYER");
+        startActivity(intent);
+    }
+
 }
