@@ -1,6 +1,8 @@
 package com.example.slide_9;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.Button;
@@ -100,7 +102,8 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             fos = openFileOutput(FILE_NAME, MODE_APPEND); // Use MODE_APPEND to append data
-            fos.write(text.getBytes());
+            String textWithNewline = text + "\n"; // Append a newline character
+            fos.write(textWithNewline.getBytes());
 
             mEditText.getText().clear();
             Toast.makeText(this, "Appended to " + getFilesDir() + "/" + FILE_NAME,
@@ -119,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 
     //load text in the file
     public void load(View v) {

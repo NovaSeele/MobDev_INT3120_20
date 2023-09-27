@@ -81,10 +81,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit_text"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
-        android:text="save"
         android:onClick="save"
-        android:layout_gravity="center_horizontal"/>
+        android:text="save" />
 
     <Button
         android:id="@+id/button_load"
@@ -107,5 +107,15 @@
         android:layout_marginTop="17dp"
         android:onClick="delete"
         android:text="delete file" />
+
+<!--    <Button-->
+<!--        android:id="@+id/button_deleteText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/button_save"-->
+<!--        android:layout_alignStart="@+id/button_save"-->
+<!--        android:layout_marginTop="-100dp"-->
+<!--        android:onClick="deleteText"-->
+<!--        android:text="delete file" />-->
 
 </LinearLayout>
