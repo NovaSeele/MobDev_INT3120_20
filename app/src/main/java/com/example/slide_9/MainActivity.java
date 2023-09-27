@@ -167,4 +167,15 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "File not deleted", Toast.LENGTH_SHORT).show();
         }
     }
+
+
+    //function to demo the function fileList()
+    public void list(View v) {
+        String[] files = fileList();
+        StringBuilder sb = new StringBuilder();
+        for (String file : files) {
+            sb.append(file).append("\n");
+        }
+        Toast.makeText(this, sb.toString(), Toast.LENGTH_SHORT).show();
+    }
 }

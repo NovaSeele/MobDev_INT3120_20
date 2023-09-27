@@ -108,14 +108,14 @@
         android:onClick="delete"
         android:text="delete file" />
 
-<!--    <Button-->
-<!--        android:id="@+id/button_deleteText"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/button_save"-->
-<!--        android:layout_alignStart="@+id/button_save"-->
-<!--        android:layout_marginTop="-100dp"-->
-<!--        android:onClick="deleteText"-->
-<!--        android:text="delete file" />-->
+    <Button
+        android:id="@+id/button_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_save"
+        android:layout_alignStart="@+id/button_save"
+        android:layout_marginTop="-100dp"
+        android:onClick="list"
+        android:text="file list" />
 
 </LinearLayout>
