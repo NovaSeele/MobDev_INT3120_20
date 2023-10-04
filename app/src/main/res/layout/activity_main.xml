@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/backgroundStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BackGround Service Status"
+        android:layout_marginBottom="30dp"
+        android:textSize="30dp"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Background Service"
+        android:onClick="onBackGroundServiceClick"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Background Service"
+        android:onClick="onBackGroundServiceStopClick"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ForeGround Service Status"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"/>
+
+    <EditText
+        android:id="@+id/edit_noti_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Notification Name"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/edit_mess_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Message Name"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/edit_time_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Time in seconds of notification"
+        android:minHeight="48dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onForeGroundServiceStartClick"
+        android:text="Start ForeGround Service" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onForeGroundServiceStopClick"
+        android:text="Stop ForeGround Service" />
+
+    <TextView
+        android:id="@+id/bound_service_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bound Service"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBoundServiceClick"
+        android:text="Start Bound Service" />
+
+</LinearLayout>
