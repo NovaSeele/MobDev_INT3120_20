@@ -14,11 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void toMedia(View view) {
-        intent = new Intent(MainActivity.this, MediaActivity.class);
-        startActivity(intent);
-    }
-
     public void toLocation(View view) {
         intent = new Intent(MainActivity.this, LocationActivity.class);
         startActivity(intent);
